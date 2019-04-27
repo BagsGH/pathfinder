@@ -1,22 +1,28 @@
 import React from 'react';
 import {connect} from "react-redux";
 import './BackgroundInformation.scss';
-import {setAlignment, setCharacterName, setRace} from "../../actions/backgroundInformationActions";
+import {setProperty} from "../../actions/genericActions";
 import {DropDownList} from '@progress/kendo-react-dropdowns';
+//@ts-ignore -- this exists and works...
 import {filterBy} from '@progress/kendo-data-query';
+import alignments from "./../../resources/misc/alignment.json";
+import MiscDataLoader from "../../data/MiscDataLoader";
 
 type StateProps = {
     characterName: string;
-    alignments: any;
+    race: string;
+    alignment: string;
+    deity: string;
+    gender: string;
+    weight: string;
+    height: string;
     races: any;
 }
 
 type OwnProps = {}
 
 type DispatchProps = {
-    setCharacterName: any;
-    setAlignment: any;
-    setRace: any;
+    setProperty: Function;
 }
 
 type Props = StateProps & OwnProps & DispatchProps;
@@ -24,64 +30,78 @@ type Props = StateProps & OwnProps & DispatchProps;
 const mapStateToProps = (state): StateProps => {
     return {
         characterName: state.bg.characterName,
-        alignments: state.bg.alignments,
+        race: state.bg.race,
+        alignment: state.bg.alignment,
+        deity: state.bg.deity,
+        gender: state.bg.gender,
+        weight: state.bg.weight,
+        height: state.bg.height,
         races: state.bg.races
     };
 };
 
 const mapDispatchToProps = (dispatch): DispatchProps => {
     return {
-        setCharacterName: name => dispatch(setCharacterName(name)),
-        setAlignment: alignment => dispatch(setAlignment(alignment)),
-        setRace: race => dispatch(setRace(race))
+        setProperty: (type, value) => dispatch(setProperty(type, value))
     };
 };
 
 export class BackgroundInformation extends React.Component<Props, {}> {
 
     raceList: any;
+    deityList: any;
 
     constructor(props: Props) {
         super(props);
-        this.handleCharacterNameUpdate = this.handleCharacterNameUpdate.bind(this);
-        this.handleAlignmentUpdate = this.handleAlignmentUpdate.bind(this);
-        this.handleRaceUpdate = this.handleRaceUpdate.bind(this);
-        this.raceFilterChange = this.raceFilterChange.bind(this);
+        this.handleInputUpdate = this.handleInputUpdate.bind(this);
+        this.handleFilteredUpdate = this.handleFilteredUpdate.bind(this);
+        this.filterChange = this.filterChange.bind(this);
         this.raceList = this.props.races.slice();
+        this.deityList = MiscDataLoader.deities();
     }
 
-    handleCharacterNameUpdate(event) {
-        this.props.setCharacterName(event.target.value);
+    handleInputUpdate(event, property) {
+        this.props.setProperty(property, event.target.value);
     }
 
-    handleAlignmentUpdate(event) {
-        this.props.setAlignment(event.target.value);
+    handleFilteredUpdate(event, property) {
+        this.props.setProperty(property, event.target.value.text);
     }
 
-    handleRaceUpdate(event) {
-        this.props.setRace(event.target.value.text);
-    }
-
-    raceFilterChange(event) {
-        this.raceList = BackgroundInformation.filterList(event.filter, this.props.races.slice());
+    filterChange(event, listName, originalList) {
+        this[listName] = filterBy(originalList.slice(), event.filter);
         this.forceUpdate();
-    }
-
-    static filterList(filter, list) {
-        return filterBy(list, filter);
     }
 
     public render() {
         return (
             <div className="background-information">
-                Character Name <input defaultValue={this.props.characterName} onInput={this.handleCharacterNameUpdate}/>
-                Alignment <DropDownList data={this.props.alignments} onChange={this.handleAlignmentUpdate}/>
+                Character Name <input defaultValue={this.props.characterName}
+                                      onInput={event => this.handleInputUpdate(event, 'character_name')}/>
+                Alignment <DropDownList data={alignments.alignments}
+                                        onChange={event => this.handleInputUpdate(event, 'alignment')}/>
                 Race <DropDownList
+                defaultValue={this.props.race}
                 data={this.raceList}
                 textField="text"
                 filterable={true}
-                onFilterChange={this.raceFilterChange}
-                onChange={this.handleRaceUpdate}/>
+                onFilterChange={event => this.filterChange(event, 'raceList', this.props.races)}
+                onChange={event => this.handleFilteredUpdate(event, 'race')}/>
+
+                Deity <DropDownList
+                defaultValue={this.props.deity}
+                data={this.deityList}
+                textField="text"
+                filterable={true}
+                onFilterChange={event => this.filterChange(event, 'deityList', MiscDataLoader.deities())}
+                onChange={event => this.handleFilteredUpdate(event, 'deity')}/>
+
+                Gender <input defaultValue={this.props.gender}
+                              onInput={event => this.handleInputUpdate(event, 'gender')}/>
+                Weight <input defaultValue={this.props.weight}
+                              onInput={event => this.handleInputUpdate(event, 'weight')}/>
+                Height <input defaultValue={this.props.height}
+                              onInput={event => this.handleInputUpdate(event, 'height')}/>
             </div>
         );
     }

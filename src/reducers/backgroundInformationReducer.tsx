@@ -1,10 +1,6 @@
 let initialState = {
     characterName: '',
     alignment: '',
-    alignments: ['Lawful Good',
-        'Neutral Good', 'Chaotic Good',
-        'Lawful Neutral', 'Neutral', 'Chaotic Neutral',
-        'Lawful Evil', 'Neutral Evil', 'Chaotic Evil'],
     race: '',
     races: [
         {id: 1, text: 'Human'},
@@ -12,7 +8,11 @@ let initialState = {
         {id: 3, text: 'Elf'},
         {id: 4, text: 'Half-Orc'},
         {id: 5, text: 'Half-Elf'},
-    ]
+    ],
+    deity: '',
+    gender: '',
+    weight: '',
+    height: '',
 };
 
 export default function backgroundInformationReducer(state = initialState, action) {
@@ -31,6 +31,26 @@ export default function backgroundInformationReducer(state = initialState, actio
             return {
                 ...state,
                 race: action.payload
+            };
+        case 'SET_DEITY':
+            return {
+                ...state,
+                deity: action.payload
+            };
+        case 'SET_GENDER':
+            return {
+                ...state,
+                gender: action.payload
+            };
+        case 'SET_WEIGHT':
+            return {
+                ...state,
+                weight: action.payload
+            };
+        case 'SET_HEIGHT':
+            return {
+                ...state,
+                height: action.payload
             };
         default:
             return state;
