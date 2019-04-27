@@ -1,3 +1,5 @@
+$brand-color: #61dafb;
+
 .App {
   text-align: center;
 }
@@ -16,11 +18,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: $brand-color;
 }
 
 .App-link {
-  color: #61dafb;
+  color: $brand-color;
 }
 
 @keyframes App-logo-spin {
