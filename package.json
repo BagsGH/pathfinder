@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@progress/kendo-data-query": "^1.5.1",
+    "@progress/kendo-react-dropdowns": "^2.10.0",
+    "@progress/kendo-react-intl": "^2.10.0",
+    "@progress/kendo-theme-default": "^3.5.1",
     "@types/jest": "24.0.11",
     "@types/node": "11.13.7",
     "@types/react": "16.8.14",

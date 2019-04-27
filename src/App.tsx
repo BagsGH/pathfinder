@@ -5,7 +5,7 @@ import {connect} from "react-redux";
 import store from "./store/store";
 import {testAction} from "./actions/testActions";
 import Magus from "./classes/magus";
-
+import '@progress/kendo-theme-default/dist/all.css';
 import * as _map from 'lodash/map';
 
 import magus from "./resources/json/classes/magus.json";
