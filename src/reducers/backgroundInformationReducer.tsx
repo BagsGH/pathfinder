@@ -13,6 +13,7 @@ let initialState = {
     gender: '',
     weight: '',
     height: '',
+    //TODO: move out of this reducer
     levels: [{level: 1, pfClass: ''}]
 };
 
@@ -73,13 +74,14 @@ export default function backgroundInformationReducer(state = initialState, actio
                 levels: state.levels.slice(0, newLevel)
             };
         case 'SET_LEVELS_CLASS':
-            let levels = state.levels.slice();
-            let levelToChange = action.payload.level;
-            let pfClass = action.payload.pfClass;
-            levels[levelToChange-1].pfClass = pfClass;
             return {
-                ... state,
-                levels: levels
+                ...state,
+                levels: state.levels.map(level => {
+                    if (level.level === action.payload.level) {
+                        return {level: level.level, pfClass: action.payload.pfClass};
+                    }
+                    return level;
+                })
             };
         default:
             return state;

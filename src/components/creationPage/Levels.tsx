@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
 import {setProperty} from "../../actions/genericActions";
-import {Button} from 'reactstrap';
 import LevelConnected from "./Level";
 
 
@@ -51,7 +50,7 @@ export class Levels extends React.Component<Props, {}> {
     public render() {
         return (
             <div className="levels">
-                <Button color="danger">Add level</Button>
+                Levels
                 {
                     this.renderLevels()
                 }
