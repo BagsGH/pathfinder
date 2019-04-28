@@ -57,7 +57,7 @@ export class BackgroundInformation extends React.Component<Props, {}> {
         this.handleFilteredUpdate = this.handleFilteredUpdate.bind(this);
         this.filterChange = this.filterChange.bind(this);
         this.raceList = this.props.races.slice();
-        this.deityList = MiscDataLoader.deities();
+        this.deityList = MiscDataLoader.deities().slice();
     }
 
     handleInputUpdate(event, property) {

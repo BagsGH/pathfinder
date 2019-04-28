@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {Store} from "redux";
 import './CreationPage.scss';
 import BackgroundInformationConnected, {BackgroundInformation} from "./BackgroundInformation";
+import CreationSettingsConnected from "./CreationSettings";
 
 type StateProps = {
     testValue: string;
@@ -40,6 +41,7 @@ export class CreationPage extends React.Component<Props, {}> {
             <div className="creation-page">
                 <div>
                     <BackgroundInformationConnected/>
+                    <CreationSettingsConnected/>
 
                 </div>
             </div>
