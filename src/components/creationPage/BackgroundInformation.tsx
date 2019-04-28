@@ -11,6 +11,7 @@ import MiscDataLoader from "../../data/MiscDataLoader";
 type StateProps = {
     characterName: string;
     race: string;
+    levels: number;
     alignment: string;
     deity: string;
     gender: string;
@@ -31,6 +32,7 @@ const mapStateToProps = (state): StateProps => {
     return {
         characterName: state.bg.characterName,
         race: state.bg.race,
+        levels: state.bg.levels.length,
         alignment: state.bg.alignment,
         deity: state.bg.deity,
         gender: state.bg.gender,
@@ -87,6 +89,9 @@ export class BackgroundInformation extends React.Component<Props, {}> {
                 filterable={true}
                 onFilterChange={event => this.filterChange(event, 'raceList', this.props.races)}
                 onChange={event => this.handleFilteredUpdate(event, 'race')}/>
+
+                Level <input defaultValue={this.props.levels+''}
+                              onInput={event => this.handleInputUpdate(event, 'levels')}/>
 
                 Deity <DropDownList
                 defaultValue={this.props.deity}

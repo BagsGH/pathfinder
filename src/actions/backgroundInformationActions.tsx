@@ -12,3 +12,12 @@ export const setRace = (race) => ({
     type: 'SET_RACE',
     payload: race
 });
+
+
+export const setLevelsClass = (level, pfClass) => ({
+    type: 'SET_LEVELS_CLASS',
+    payload: {
+        level: level,
+        pfClass: pfClass
+    }
+});

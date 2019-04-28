@@ -13,6 +13,7 @@ let initialState = {
     gender: '',
     weight: '',
     height: '',
+    levels: [{level: 1, pfClass: ''}]
 };
 
 export default function backgroundInformationReducer(state = initialState, action) {
@@ -52,7 +53,43 @@ export default function backgroundInformationReducer(state = initialState, actio
                 ...state,
                 height: action.payload
             };
+        case 'SET_LEVELS':
+            let newLevel = parseInt(action.payload);
+            if (invalidNewLevel(newLevel)) {
+                return state;
+            }
+            if (addingNewLevels(newLevel, state.levels.length)) {
+                let newLevels = state.levels.slice();
+                for (let i = state.levels.length + 1; i <= newLevel; i++) {
+                    newLevels.push({level: i, pfClass: ''});
+                }
+                return {
+                    ...state,
+                    levels: newLevels
+                }
+            }
+            return {
+                ...state,
+                levels: state.levels.slice(0, newLevel)
+            };
+        case 'SET_LEVELS_CLASS':
+            let levels = state.levels.slice();
+            let levelToChange = action.payload.level;
+            let pfClass = action.payload.pfClass;
+            levels[levelToChange-1].pfClass = pfClass;
+            return {
+                ... state,
+                levels: levels
+            };
         default:
             return state;
     }
+}
+
+function invalidNewLevel(newLevel) {
+    return !newLevel || newLevel < 1;
+}
+
+function addingNewLevels(newLevel, oldLevel) {
+    return newLevel > oldLevel;
 }

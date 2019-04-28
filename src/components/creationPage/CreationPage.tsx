@@ -4,6 +4,7 @@ import {Store} from "redux";
 import './CreationPage.scss';
 import BackgroundInformationConnected, {BackgroundInformation} from "./BackgroundInformation";
 import CreationSettingsConnected from "./CreationSettings";
+import LevelsConnected from "./Levels";
 
 type StateProps = {
     testValue: string;
@@ -42,7 +43,7 @@ export class CreationPage extends React.Component<Props, {}> {
                 <div>
                     <BackgroundInformationConnected/>
                     <CreationSettingsConnected/>
-
+                    <LevelsConnected/>
                 </div>
             </div>
         );
