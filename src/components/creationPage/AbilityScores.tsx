@@ -2,10 +2,10 @@ import React from 'react';
 import {connect} from "react-redux";
 import DiceUtils from "../../utils/DiceUtils";
 import * as _find from 'lodash/find';
-import as from "./../../resources/json/misc/abilityScoreCosts.json";
 import {setAbilityScore} from "../../actions/StatisticActions";
 import MiscDataLoader from "../../data/MiscDataLoader";
-
+import * as _min from 'lodash/min';
+import * as _max from 'lodash/max';
 
 type StateProps = {
     abilityScoreDetermination: string;
@@ -46,6 +46,7 @@ export class AbilityScores extends React.Component<Props, {}> {
         this.renderScores = this.renderScores.bind(this);
         this.renderPointBuyTotalCost = this.renderPointBuyTotalCost.bind(this);
         this.abilityScoreFromState = this.abilityScoreFromState.bind(this);
+        this.renderRolls = this.renderRolls.bind(this);
         this.rolledScores = new Map();
 
         //TODO: better way to handle this... maybe set default state to undefined, and map undefined to 10 for 'self entered'and pb
@@ -60,34 +61,38 @@ export class AbilityScores extends React.Component<Props, {}> {
 
         this.calculationMap = {
             '4d6 - drop smallest': (name) => {
-                if(!this.rolledScores.get(name)) {
+                if (!this.rolledScores.get(name)) {
                     let roll = DiceUtils.rollAbilityScores4d6();
                     this.rolledScores.set(name, true);
                     this.props.setAbilityScore(name, roll);
                     return roll;
-                }
-                else {
+                } else {
                     return this.abilityScoreFromState(name);
                 }
             },
             'Self-Entered': () => {
                 return '';
             },
-            '3d6 - re-roll 1s':  (name) => {
-                if(!this.rolledScores.get(name)) {
+            '3d6 - re-roll 1s': (name) => {
+                if (!this.rolledScores.get(name)) {
                     let roll = DiceUtils.rollAbilityScores4d6();
                     this.rolledScores.set(name, true);
                     this.props.setAbilityScore(name, roll);
                     return roll;
-                }
-                else {
+                } else {
                     return this.abilityScoreFromState(name);
                 }
             },
             'Point buy: 10': (name) => this.abilityScoreFromState(name),
             'Point buy: 15': (name) => this.abilityScoreFromState(name),
             'Point buy: 20': (name) => this.abilityScoreFromState(name),
-            'Point buy: 25': (name) => this.abilityScoreFromState(name)
+            'Point buy: 25': (name) => this.abilityScoreFromState(name),
+            '3d6 - assign': () => {
+                return '';
+            },
+            '4d6 - assign': () => {
+                return '';
+            }
         };
     }
 
@@ -105,9 +110,14 @@ export class AbilityScores extends React.Component<Props, {}> {
     }
 
     handleAbilityScoreUpdate(event, name) {
-        if (parseInt(event.target.value) >= 7) {
+        if (this.isValidAbilityScoreValue(parseInt(event.target.value))) {
             this.props.setAbilityScore(name, event.target.value);
         }
+    }
+
+    private isValidAbilityScoreValue(value) {
+        return value >= _min(Array.from(this.abilityScoresCostMap.keys()))
+            && value <= _max(Array.from(this.abilityScoresCostMap.keys()));
     }
 
     renderPointBuyTotalCost() {
@@ -137,8 +147,7 @@ export class AbilityScores extends React.Component<Props, {}> {
                                         onInput={event => this.handleAbilityScoreUpdate(event, 'wis')}/></div>);
             render.push(<div>CHA <input defaultValue={this.calculateAbilityScoreDisplay('cha') + ''}
                                         onInput={event => this.handleAbilityScoreUpdate(event, 'cha')}/></div>);
-        }
-        else if (this.props.abilityScoreDetermination.toLowerCase().includes('self')) {
+        } else if (this.props.abilityScoreDetermination.toLowerCase().includes('self') || this.props.abilityScoreDetermination.toLowerCase().includes('assign')) {
             render.push(<div>STR <input defaultValue={this.calculateAbilityScoreDisplay('str') + ''}
                                         onInput={event => this.handleAbilityScoreUpdate(event, 'str')}/></div>);
             render.push(<div>DEX <input defaultValue={this.calculateAbilityScoreDisplay('dex') + ''}
@@ -151,8 +160,7 @@ export class AbilityScores extends React.Component<Props, {}> {
                                         onInput={event => this.handleAbilityScoreUpdate(event, 'wis')}/></div>);
             render.push(<div>CHA <input defaultValue={this.calculateAbilityScoreDisplay('cha') + ''}
                                         onInput={event => this.handleAbilityScoreUpdate(event, 'cha')}/></div>);
-        }
-        else {
+        } else {
             render.push(<div>STR <input defaultValue={this.calculateAbilityScoreDisplay('str') + ''}
                                         disabled={true}/></div>);
             render.push(<div>DEX <input defaultValue={this.calculateAbilityScoreDisplay('dex') + ''}
@@ -169,18 +177,29 @@ export class AbilityScores extends React.Component<Props, {}> {
         return render;
     }
 
+    //TODO: make static
+    renderRolls() {
+        if (this.props.abilityScoreDetermination === '3d6 - assign') {
+            return <div>Assign: {DiceUtils.rollAbilityScores3d6()} {DiceUtils.rollAbilityScores3d6()} {DiceUtils.rollAbilityScores3d6()} {DiceUtils.rollAbilityScores3d6()} {DiceUtils.rollAbilityScores3d6()} {DiceUtils.rollAbilityScores3d6()} </div>
+        }
+        if (this.props.abilityScoreDetermination === '4d6 - assign') {
+            return <div>Assign: {DiceUtils.rollAbilityScores4d6()} {DiceUtils.rollAbilityScores4d6()} {DiceUtils.rollAbilityScores4d6()} {DiceUtils.rollAbilityScores4d6()} {DiceUtils.rollAbilityScores4d6()} {DiceUtils.rollAbilityScores4d6()} </div>
+        }
+    }
 
-    //TODO: turn into drop downs if point uby?
+    //TODO: turn into drop downs if point uby/self-enter?
     public render() {
         return (
             <div className="ability-scores">
+                {
+                    this.renderRolls()
+                }
                 {
                     this.renderPointBuyTotalCost()
                 }
                 {
                     this.renderScores()
                 }
-
             </div>
         );
     }

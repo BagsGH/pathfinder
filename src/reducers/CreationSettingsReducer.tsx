@@ -6,7 +6,15 @@ let initialState = {
     randomStartingHealth: false,
     randomLevelingHealth: false,
     randomStartingWealth: false,
-    abilityScoreDetermination: 'Point buy: 10'
+    // abilityScoreDetermination: '3d6 - re-roll 1s'
+    // abilityScoreDetermination: '4d6 - drop smallest'
+    abilityScoreDetermination: '3d6 - assign'
+    // abilityScoreDetermination: '4d6 - assign'
+    // abilityScoreDetermination: 'Self-Enter'
+    // abilityScoreDetermination: 'Point buy: 10'
+    // abilityScoreDetermination: 'Point buy: 15'
+    // abilityScoreDetermination: 'Point buy: 20'
+    // abilityScoreDetermination: 'Point buy: 25'
 };
 
 export default function creationSettingsReducer(state = initialState, action) {
