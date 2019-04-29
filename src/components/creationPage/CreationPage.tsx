@@ -5,6 +5,7 @@ import './CreationPage.scss';
 import BackgroundInformationConnected, {BackgroundInformation} from "./BackgroundInformation";
 import CreationSettingsConnected from "./CreationSettings";
 import LevelsConnected from "./Levels";
+import AbilityScoresConnected from "./AbilityScores";
 
 type StateProps = {
     testValue: string;
@@ -44,6 +45,7 @@ export class CreationPage extends React.Component<Props, {}> {
                     <BackgroundInformationConnected/>
                     <CreationSettingsConnected/>
                     <LevelsConnected/>
+                    <AbilityScoresConnected/>
                 </div>
             </div>
         );

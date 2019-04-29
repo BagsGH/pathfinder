@@ -32,7 +32,7 @@ const mapStateToProps = (state): StateProps => {
     return {
         characterName: state.bg.characterName,
         race: state.bg.race,
-        levels: state.bg.levels.length,
+        levels: state.levels.levels.length,
         alignment: state.bg.alignment,
         deity: state.bg.deity,
         gender: state.bg.gender,

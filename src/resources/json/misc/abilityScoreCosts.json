@@ -1,0 +1,50 @@
+[
+  {
+    "score": 7,
+    "cost": -4
+  },
+  {
+    "score": 8,
+    "cost": -2
+  },
+  {
+    "score": 9,
+    "cost": -1
+  },
+  {
+    "score": 10,
+    "cost": 0
+  },
+  {
+    "score": 11,
+    "cost": 1
+  },
+  {
+    "score": 12,
+    "cost": 2
+  },
+  {
+    "score": 13,
+    "cost": 3
+  },
+  {
+    "score": 14,
+    "cost": 5
+  },
+  {
+    "score": 15,
+    "cost": 7
+  },
+  {
+    "score": 16,
+    "cost": 10
+  },
+  {
+    "score": 17,
+    "cost": 13
+  },
+  {
+    "score": 18,
+    "cost": 17
+  }
+]

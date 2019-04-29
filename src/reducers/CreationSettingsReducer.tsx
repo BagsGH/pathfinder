@@ -5,7 +5,8 @@ let initialState = {
     fractionalBab: false,
     randomStartingHealth: false,
     randomLevelingHealth: false,
-    randomStartingWealth: false
+    randomStartingWealth: false,
+    abilityScoreDetermination: 'Self-Entered'
 };
 
 export default function creationSettingsReducer(state = initialState, action) {

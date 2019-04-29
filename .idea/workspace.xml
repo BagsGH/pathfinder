@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68e5fe63-64f1-4e2b-979c-c1f6502be07b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/creationPage/Level.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/creationPage/Level.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/StatisticActions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/creationPage/AbilityScores.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/LevelsReducer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/StatisticsReducer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/json/misc/abilityScoreCosts.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/DiceUtils.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/creationPage/BackgroundInformation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/creationPage/BackgroundInformation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/creationPage/CreationPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/creationPage/CreationPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/creationPage/Levels.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/creationPage/Levels.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/CreationSettingsReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/CreationSettingsReducer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/backgroundInformationReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/backgroundInformationReducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/rootReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/rootReducer.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/creationPage/CreationSettings.tsx">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/creationPage/AbilityScores.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="74" column="92" lean-forward="true" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="92" />
+            <state relative-caret-position="336">
+              <caret line="156" column="112" selection-start-line="156" selection-start-column="112" selection-end-line="156" selection-end-column="112" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -45,56 +55,64 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/creationPage/CreationPage.tsx">
+        <entry file="file://$PROJECT_DIR$/src/reducers/StatisticsReducer.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="224">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/creationPage/Levels.tsx">
+        <entry file="file://$PROJECT_DIR$/src/reducers/rootReducer.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/creationPage/Level.tsx">
+        <entry file="file://$PROJECT_DIR$/src/actions/StatisticActions.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="64">
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/creationPage/BackgroundInformation.tsx">
+        <entry file="file://$PROJECT_DIR$/src/reducers/LevelsReducer.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-209">
-              <caret line="60" column="49" lean-forward="true" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#264#316#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="304">
+              <caret line="25" column="30" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/backgroundInformationActions.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reducers/backgroundInformationReducer.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+            <state relative-caret-position="80">
+              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/CreationSettingsReducer.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -120,7 +138,13 @@
       <find>parse</find>
       <find>BackgroundInformation</find>
       <find>CreationSettings</find>
+      <find>bg.levels</find>
       <find>Levels</find>
+      <find>'10'</find>
+      <find />
+      <find>:</find>
+      <find>oninput</find>
+      <find>SET_LEVELS_CLASS</find>
     </findStrings>
     <replaceStrings>
       <replace>willSave</replace>
@@ -129,6 +153,10 @@
       <replace>CreationSettings</replace>
       <replace>Levels</replace>
       <replace>Level</replace>
+      <replace>AbilityScores</replace>
+      <replace>this.rollAbilityScores4d6 + ''</replace>
+      <replace>&quot;:</replace>
+      <replace>, &quot;cost&quot;:</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -165,27 +193,32 @@
         <option value="$PROJECT_DIR$/src/constants/StateConstants.tsx" />
         <option value="$PROJECT_DIR$/src/components/creationPage/Settings.tsx" />
         <option value="$PROJECT_DIR$/src/enums/creationPage/ExperienceSpeed.tsx" />
-        <option value="$PROJECT_DIR$/src/reducers/CreationSettingsReducer.tsx" />
         <option value="$PROJECT_DIR$/src/enums/creationPage/LevelSpeed.tsx" />
         <option value="$PROJECT_DIR$/src/enums/creationPage/LevelingSpeed.tsx" />
         <option value="$PROJECT_DIR$/src/index.tsx" />
-        <option value="$PROJECT_DIR$/src/reducers/rootReducer.tsx" />
         <option value="$PROJECT_DIR$/src/reducers/UiReducer.tsx" />
         <option value="$PROJECT_DIR$/src/components/creationPage/CreationSettings.tsx" />
-        <option value="$PROJECT_DIR$/src/components/creationPage/CreationPage.tsx" />
-        <option value="$PROJECT_DIR$/src/components/creationPage/BackgroundInformation.tsx" />
         <option value="$PROJECT_DIR$/src/actions/backgroundInformationActions.tsx" />
-        <option value="$PROJECT_DIR$/src/components/creationPage/Levels.tsx" />
         <option value="$PROJECT_DIR$/src/components/creationPage/Level.tsx" />
+        <option value="$PROJECT_DIR$/src/reducers/LevelsReducer.tsx" />
+        <option value="$PROJECT_DIR$/src/components/creationPage/BackgroundInformation.tsx" />
+        <option value="$PROJECT_DIR$/src/components/creationPage/Levels.tsx" />
         <option value="$PROJECT_DIR$/src/reducers/backgroundInformationReducer.tsx" />
+        <option value="$PROJECT_DIR$/src/components/creationPage/CreationPage.tsx" />
+        <option value="$PROJECT_DIR$/src/reducers/rootReducer.tsx" />
+        <option value="$PROJECT_DIR$/src/resources/misc/abilityScoreCosts.json" />
+        <option value="$PROJECT_DIR$/src/resources/json/misc/abilityScoreCosts.json" />
+        <option value="$PROJECT_DIR$/src/actions/StatisticActions.tsx" />
+        <option value="$PROJECT_DIR$/src/utils/DiceUtils.tsx" />
+        <option value="$PROJECT_DIR$/src/reducers/StatisticsReducer.tsx" />
+        <option value="$PROJECT_DIR$/src/reducers/CreationSettingsReducer.tsx" />
+        <option value="$PROJECT_DIR$/src/components/creationPage/AbilityScores.tsx" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-633" />
-    <option name="y" value="1038" />
-    <option name="width" value="7710" />
-    <option name="height" value="2199" />
+    <option name="width" value="3840" />
+    <option name="height" value="2160" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -232,13 +265,49 @@
               <item name="pathfinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="pathfinder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pathfinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="pathfinder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pathfinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pathfinder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pathfinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pathfinder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pathfinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pathfinder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
+              <item name="misc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pathfinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pathfinder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="misc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pathfinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pathfinder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -251,17 +320,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last.edited.regexp" value="+5+5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/creationPage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/actions" />
     <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
     <property name="ts.external.directory.path" value="D:\Files\Documents\Code\pathfinder\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Files\Documents\Code\pathfinder\src\components\creationPage" />
-      <recent name="D:\Files\Documents\Code\pathfinder\src\reducers" />
-      <recent name="D:\Files\Documents\Code\pathfinder\resources\json\misc" />
       <recent name="D:\Files\Documents\Code\pathfinder\src\actions" />
-      <recent name="D:\Files\Documents\Code\pathfinder\src\resources\misc" />
+      <recent name="D:\Files\Documents\Code\pathfinder\src\resources\json\misc" />
+      <recent name="D:\Files\Documents\Code\pathfinder\src\reducers" />
+      <recent name="D:\Files\Documents\Code\pathfinder\src\components\creationPage" />
+      <recent name="D:\Files\Documents\Code\pathfinder\resources\json\misc" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Files\Documents\Code\pathfinder\src\resources\misc" />
@@ -298,12 +367,12 @@
       <workItem from="1556322701531" duration="6334000" />
       <workItem from="1556330285477" duration="473000" />
       <workItem from="1556368121177" duration="19750000" />
-      <workItem from="1556457685007" duration="5368000" />
+      <workItem from="1556457685007" duration="14725000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44265000" />
+    <option name="totallyTimeSpent" value="53622000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -334,7 +403,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.21357615" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.18046358" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.11092715" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
@@ -501,16 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="38" column="52" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/genericActions.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -573,10 +632,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/creationPage/CreationSettings.tsx">
+    <entry file="file://$PROJECT_DIR$/src/reducers/UiReducer.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="74" column="92" lean-forward="true" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="92" />
+        <state relative-caret-position="112">
+          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/creationPage/Levels.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-193">
+          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -585,55 +651,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/creationPage/CreationPage.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="223">
+          <caret line="47" column="29" lean-forward="true" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/UiReducer.tsx">
+    <entry file="file://$PROJECT_DIR$/src/components/creationPage/CreationSettings.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/rootReducer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        <state relative-caret-position="17">
+          <caret line="74" column="92" lean-forward="true" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="92" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/CreationSettingsReducer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/backgroundInformationActions.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/creationPage/Levels.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/creationPage/Level.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
+        <state relative-caret-position="864">
           <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -641,21 +679,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/creationPage/BackgroundInformation.tsx">
+    <entry file="file://$PROJECT_DIR$/src/App.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
-          <caret line="60" column="49" lean-forward="true" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
+        <state relative-caret-position="96">
+          <caret line="252" lean-forward="true" selection-start-line="252" selection-end-line="254" selection-end-column="1" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#264#316#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/lodash/filter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-417" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/json/misc/abilityScoreCosts.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/misc/abilityScoreCosts.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="33" column="3" lean-forward="true" selection-end-line="49" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/creationPage/BackgroundInformation.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/backgroundInformationReducer.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        <state relative-caret-position="80">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/DiceUtils.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/LevelsReducer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/backgroundInformationActions.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/CreationSettingsReducer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/StatisticActions.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/StatisticsReducer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/rootReducer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/creationPage/AbilityScores.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="156" column="112" selection-start-line="156" selection-start-column="112" selection-end-line="156" selection-end-column="112" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

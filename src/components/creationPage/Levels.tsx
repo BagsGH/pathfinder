@@ -18,7 +18,7 @@ type Props = StateProps & OwnProps & DispatchProps;
 
 const mapStateToProps = (state): StateProps => {
     return {
-        levels: state.bg.levels
+        levels: state.levels.levels
     };
 };
 
@@ -33,7 +33,6 @@ export class Levels extends React.Component<Props, {}> {
     constructor(props: Props) {
         super(props);
         this.renderLevels = this.renderLevels.bind(this);
-
     }
 
     renderLevels() {
