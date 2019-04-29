@@ -4,6 +4,7 @@ import DiceUtils from "../../utils/DiceUtils";
 import * as _find from 'lodash/find';
 import as from "./../../resources/json/misc/abilityScoreCosts.json";
 import {setAbilityScore} from "../../actions/StatisticActions";
+import MiscDataLoader from "../../data/MiscDataLoader";
 
 
 type StateProps = {
@@ -55,12 +56,7 @@ export class AbilityScores extends React.Component<Props, {}> {
         this.rolledScores.set('int', false);
         this.rolledScores.set('cha', false);
 
-        //TODO: move this to data loader
-        this.abilityScoresCostMap = new Map();
-        let that = this;
-        as.forEach(score => {
-            that.abilityScoresCostMap.set(score.score, score.cost);
-        });
+        this.abilityScoresCostMap = MiscDataLoader.abilityScoreCostMap();
 
         this.calculationMap = {
             '4d6 - drop smallest': (name) => {

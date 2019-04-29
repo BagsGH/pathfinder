@@ -5,7 +5,7 @@ import {setProperty} from "../../actions/genericActions";
 import {DropDownList} from '@progress/kendo-react-dropdowns';
 //@ts-ignore -- this exists and works...
 import {filterBy} from '@progress/kendo-data-query';
-import alignments from "./../../resources/misc/alignment.json";
+import alignments from "../../resources/json/misc/alignment.json";
 import MiscDataLoader from "../../data/MiscDataLoader";
 
 type StateProps = {

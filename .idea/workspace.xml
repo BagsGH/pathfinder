@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68e5fe63-64f1-4e2b-979c-c1f6502be07b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/StatisticActions.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/creationPage/AbilityScores.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/LevelsReducer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/StatisticsReducer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/json/misc/abilityScoreCosts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/DiceUtils.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/creationPage/AbilityScores.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/creationPage/AbilityScores.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/creationPage/BackgroundInformation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/creationPage/BackgroundInformation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/creationPage/CreationPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/creationPage/CreationPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/creationPage/Levels.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/creationPage/Levels.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/MiscDataLoader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/MiscDataLoader.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/CreationSettingsReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/CreationSettingsReducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/backgroundInformationReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/backgroundInformationReducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/rootReducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/rootReducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/misc/alignment.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/json/misc/alignment.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/misc/deity.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/json/misc/deity.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,14 +35,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/creationPage/AbilityScores.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="156" column="112" selection-start-line="156" selection-start-column="112" selection-end-line="156" selection-end-column="112" />
+            <state relative-caret-position="315">
+              <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="27" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/MiscDataLoader.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/json/misc/deity.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="10" column="22" lean-forward="true" selection-end-line="3409" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -108,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/reducers/CreationSettingsReducer.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="128">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+              <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -188,7 +202,6 @@
         <option value="$PROJECT_DIR$/src/resources/misc/alignments.json" />
         <option value="$PROJECT_DIR$/src/actions/genericActions.tsx" />
         <option value="$PROJECT_DIR$/src/resources/misc/deity.json" />
-        <option value="$PROJECT_DIR$/src/data/MiscDataLoader.tsx" />
         <option value="$PROJECT_DIR$/src/constants/backgroundInformationConstants.tsx" />
         <option value="$PROJECT_DIR$/src/constants/StateConstants.tsx" />
         <option value="$PROJECT_DIR$/src/components/creationPage/Settings.tsx" />
@@ -211,8 +224,9 @@
         <option value="$PROJECT_DIR$/src/actions/StatisticActions.tsx" />
         <option value="$PROJECT_DIR$/src/utils/DiceUtils.tsx" />
         <option value="$PROJECT_DIR$/src/reducers/StatisticsReducer.tsx" />
-        <option value="$PROJECT_DIR$/src/reducers/CreationSettingsReducer.tsx" />
+        <option value="$PROJECT_DIR$/src/data/MiscDataLoader.tsx" />
         <option value="$PROJECT_DIR$/src/components/creationPage/AbilityScores.tsx" />
+        <option value="$PROJECT_DIR$/src/reducers/CreationSettingsReducer.tsx" />
       </list>
     </option>
   </component>
@@ -246,26 +260,7 @@
               <item name="pathfinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="pathfinder" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pathfinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pathfinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pathfinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pathfinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="creationPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pathfinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pathfinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pathfinder" type="b2602c69:ProjectViewProjectNode" />
@@ -286,21 +281,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="json" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pathfinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pathfinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-              <item name="misc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pathfinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pathfinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="misc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -333,6 +313,7 @@
       <recent name="D:\Files\Documents\Code\pathfinder\resources\json\misc" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Files\Documents\Code\pathfinder\src\resources\json\misc" />
       <recent name="D:\Files\Documents\Code\pathfinder\src\resources\misc" />
       <recent name="D:\Files\Documents\Code\pathfinder\resources\json" />
       <recent name="D:\Files\Documents\Code\pathfinder\src\components\creationPage" />
@@ -367,12 +348,12 @@
       <workItem from="1556322701531" duration="6334000" />
       <workItem from="1556330285477" duration="473000" />
       <workItem from="1556368121177" duration="19750000" />
-      <workItem from="1556457685007" duration="14725000" />
+      <workItem from="1556457685007" duration="15264000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53622000" />
+    <option name="totallyTimeSpent" value="54161000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -584,23 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/misc/deity.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="22" lean-forward="true" selection-end-line="3409" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/MiscDataLoader.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="16" lean-forward="true" selection-end-line="18" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/constants/StateConstants.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -625,7 +589,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/misc/alignment.json">
+    <entry file="file://$PROJECT_DIR$/src/resources/json/misc/alignment.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
@@ -746,17 +710,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/CreationSettingsReducer.tsx">
+    <entry file="file://$PROJECT_DIR$/src/reducers/rootReducer.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/StatisticActions.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        <state relative-caret-position="48">
+          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -767,20 +724,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/rootReducer.tsx">
+    <entry file="file://$PROJECT_DIR$/src/resources/json/misc/deity.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        <state relative-caret-position="160">
+          <caret line="10" column="22" lean-forward="true" selection-end-line="3409" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/MiscDataLoader.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/StatisticActions.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/creationPage/AbilityScores.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="156" column="112" selection-start-line="156" selection-start-column="112" selection-end-line="156" selection-end-column="112" />
+        <state relative-caret-position="315">
+          <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="27" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/CreationSettingsReducer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
         </state>
       </provider>
     </entry>

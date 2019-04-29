@@ -1,4 +1,5 @@
-import deities from "./../resources/misc/deity.json";
+import deities from "../resources/json/misc/deity.json";
+import as from "../resources/json/misc/abilityScoreCosts.json";
 import * as _map from "lodash/map";
 
 class MiscDataLoader {
@@ -12,6 +13,14 @@ class MiscDataLoader {
 
     public static deities() {
         return MiscDataLoader.mappedDeities;
+    }
+
+    public static abilityScoreCostMap() {
+        let map = new Map();
+        as.forEach(score => {
+            map.set(score.score, score.cost);
+        });
+        return map;
     }
 
 }

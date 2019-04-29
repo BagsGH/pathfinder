@@ -6,7 +6,7 @@ let initialState = {
     randomStartingHealth: false,
     randomLevelingHealth: false,
     randomStartingWealth: false,
-    abilityScoreDetermination: 'Self-Entered'
+    abilityScoreDetermination: 'Point buy: 10'
 };
 
 export default function creationSettingsReducer(state = initialState, action) {
